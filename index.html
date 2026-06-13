@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vuturu Chandra Sekhar Reddy - AI & Machine Learning Engineering Student Portfolio. Specializing in AI-powered applications, Machine Learning models, and Python developer.">
+    <meta name="keywords" content="Vuturu Chandra Sekhar Reddy, AI Engineer, Machine Learning Engineer, Python Developer, Software Developer, Portfolio, CSE AI">
+    <meta name="author" content="Vuturu Chandra Sekhar Reddy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vuturu Chandra Sekhar Reddy | AI & Machine Learning Engineer">
+    <meta property="og:description" content="B.Tech Computer Science & Engineering (AI) student portfolio. Building intelligent AI/ML solutions and Python applications.">
+    
+    <title>Vuturu Chandra Sekhar Reddy | AI & Machine Learning Engineer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons for Modern Vector Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <!-- Core CSS stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Custom Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header / Sticky Navigation -->
+    <header class="navbar-header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-accent">&lt;</span>VCSR<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#internship" class="nav-link">Internship</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link contact-btn">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Sidebar Backdrop -->
+    <div class="menu-backdrop" id="menu-backdrop"></div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="greeting-badge">Welcome to my space</span>
+                    <h1 class="hero-title">
+                        Hi, I'm <br>
+                        <span class="gradient-text name-text">Vuturu Chandra Sekhar Reddy</span>
+                    </h1>
+                    <div class="tagline-container">
+                        <span class="tagline-prefix">I am a </span>
+                        <span id="typed-text" class="gradient-text-accent"></span>
+                        <span class="typed-cursor">|</span>
+                    </div>
+                    <p class="hero-desc">
+                        I build AI-powered applications, Machine Learning models, and intelligent software solutions. Specializing in Python development and solving complex, real-world problems.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                        <a href="assets/Vuturu_Chandra_Sekhar_Reddy_Resume.pdf" target="_blank" class="btn btn-secondary" download>
+                            <span>Download Resume</span>
+                            <i class='bx bx-download'></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Contact Me</span>
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-graphic-container">
+                    <div class="floating-illustration">
+                        <div class="sphere-core"></div>
+                        <div class="orbit orbit-1">
+                            <div class="node node-1"></div>
+                        </div>
+                        <div class="orbit orbit-2">
+                            <div class="node node-2"></div>
+                        </div>
+                        <div class="orbit orbit-3">
+                            <div class="node node-3"></div>
+                        </div>
+                        <div class="glass-overlay-card">
+                            <div class="code-line"><span class="c-key">import</span> tensorflow <span class="c-key">as</span> tf</div>
+                            <div class="code-line"><span class="c-key">import</span> numpy <span class="c-key">as</span> np</div>
+                            <div class="code-line"><span class="c-comment"># Building brain model</span></div>
+                            <div class="code-line">model = tf.keras.Sequential([</div>
+                            <div class="code-line">&nbsp;&nbsp;tf.keras.layers.Dense(<span class="c-val">128</span>),</div>
+                            <div class="code-line">&nbsp;&nbsp;tf.keras.layers.Dense(<span class="c-val">1</span>)</div>
+                            <div class="code-line">])</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Biography</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-bio">
+                        <div class="bio-card glass-card">
+                            <i class='bx bx-user-circle bio-icon gradient-text'></i>
+                            <p>
+                                I am a passionate B.Tech Computer Science & Engineering (Artificial Intelligence) student with a strong academic foundation (9.06 CGPA) at Madanapalle Institute of Technology and Science.
+                            </p>
+                            <p>
+                                My primary interests lie in Artificial Intelligence, Machine Learning, Python development, and software problem-solving. I thrive on translating abstract theoretical concepts into real-world applications that add tangible value.
+                            </p>
+                            <p>
+                                I am actively seeking opportunities to contribute, innovate, and grow as an AI Engineer in a challenging development environment.
+                            </p>
+                            <div class="fun-facts">
+                                <div class="fact-item">
+                                    <span class="fact-number gradient-text">9.06</span>
+                                    <span class="fact-label">B.Tech CGPA</span>
+                                </div>
+                                <div class="fact-item">
+                                    <span class="fact-number gradient-text">2027</span>
+                                    <span class="fact-label">Graduation Year</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-education">
+                        <h3 class="subsection-title"><i class='bx bxs-graduation'></i> Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item glass-card">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-date">2023 – 2027</span>
+                                <h4 class="timeline-title">B.Tech CSE (Artificial Intelligence)</h4>
+                                <p class="timeline-inst">Madanapalle Institute of Technology and Science</p>
+                                <span class="grade-badge">CGPA: 9.06 / 10.0</span>
+                            </div>
+                            
+                            <div class="timeline-item glass-card">
+                                <div class="timeline-dot"></div>
+                                <span class="timeline-date">2021 – 2023</span>
+                                <h4 class="timeline-title">Intermediate (M.P.C)</h4>
+                                <p class="timeline-inst">Sri Chaitanya Jr. College</p>
+                                <span class="grade-badge">Percentage: 93.6%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Competence</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    
+                    <!-- Programming -->
+                    <div class="skill-category glass-card">
+                        <div class="category-header">
+                            <i class='bx bx-code-alt category-icon c1'></i>
+                            <h3>Programming</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill fill-python" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Java</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill fill-java" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>SQL</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill fill-sql" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning -->
+                    <div class="skill-category glass-card">
+                        <div class="category-header">
+                            <i class='bx bx-brain category-icon c2'></i>
+                            <h3>Machine Learning</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Scikit-learn</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill fill-sklearn" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Pandas & NumPy</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill fill-pandas" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Matplotlib & Seaborn</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill fill-viz" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="skill-category glass-card">
+                        <div class="category-header">
+                            <i class='bx bx-globe category-icon c3'></i>
+                            <h3>Web Tech</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML5</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill fill-html" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>CSS3</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill fill-css" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="skill-category glass-card">
+                        <div class="category-header">
+                            <i class='bx bx-data category-icon c4'></i>
+                            <h3>Database Management</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>MySQL</span>
+                                    <span>82%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill fill-mysql" data-width="82%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship Section -->
+        <section id="internship" class="internship-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Experience</span>
+                    <h2 class="section-title">Internships</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="internship-card glass-card">
+                    <div class="intern-header">
+                        <div class="intern-title-block">
+                            <h3 class="intern-role gradient-text">Machine Learning Intern</h3>
+                            <h4 class="intern-company">Inspire Softech Solutions</h4>
+                        </div>
+                        <div class="intern-badge">Completed</div>
+                    </div>
+                    <p class="intern-desc">
+                        Gained hands-on experience in collecting, cleaning, preprocessing, and analyzing data using standard Python library packages. Focused on developing predictive modeling algorithms and visualizing metrics.
+                    </p>
+                    <div class="intern-highlights">
+                        <h4 class="highlights-title"><i class='bx bx-star'></i> Key Deliverables & Highlights:</h4>
+                        <ul>
+                            <li>
+                                <div class="bullet-icon"><i class='bx bx-check-double'></i></div>
+                                <span>Developed a highly accurate **Diabetes Prediction Model** using Python and Scikit-learn algorithms.</span>
+                            </li>
+                            <li>
+                                <div class="bullet-icon"><i class='bx bx-check-double'></i></div>
+                                <span>Performed feature engineering, missing values imputation, and scaling using **Pandas** and **NumPy**.</span>
+                            </li>
+                            <li>
+                                <div class="bullet-icon"><i class='bx bx-check-double'></i></div>
+                                <span>Created intuitive exploratory data visualizations with **Matplotlib** and **Seaborn** to discover patterns.</span>
+                            </li>
+                            <li>
+                                <div class="bullet-icon"><i class='bx bx-check-double'></i></div>
+                                <span>Trained and evaluated multiple classification models (e.g., Logistic Regression, Support Vector Machines) to select the best performer.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">My Creations</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card">
+                        <div class="project-img-placeholder">
+                            <div class="project-icon-wrapper">
+                                <i class='bx bx-message-square-detail'></i>
+                            </div>
+                            <div class="project-accent-glow glow-blue"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">AI</span>
+                            </div>
+                            <h3 class="project-title">Student Mental Illness Chatbot</h3>
+                            <p class="project-description">
+                                Developed an AI-powered conversational chatbot to provide empathetic mental health support for students. Includes automated symptom screening, interactive dialogue flow, and targeted resource routing.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="btn-project btn-project-primary" aria-label="GitHub Repository">
+                                    <i class='bx bxl-github'></i> Code
+                                </a>
+                                <a href="#" class="btn-project btn-project-outline" aria-label="Live Demo">
+                                    <i class='bx bx-link-external'></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card">
+                        <div class="project-img-placeholder">
+                            <div class="project-icon-wrapper">
+                                <i class='bx bx-test-tube'></i>
+                            </div>
+                            <div class="project-accent-glow glow-purple"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Scikit-learn</span>
+                            </div>
+                            <h3 class="project-title">Diabetes Prediction System</h3>
+                            <p class="project-description">
+                                Built an end-to-end Machine Learning classifier predicting diabetes incidence. Performed outlier treatment, correlation analysis, and hyperparameter tuning to ensure robust diagnostic prediction.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="btn-project btn-project-primary" aria-label="GitHub Repository">
+                                    <i class='bx bxl-github'></i> Code
+                                </a>
+                                <a href="#" class="btn-project btn-project-outline" aria-label="Live Demo">
+                                    <i class='bx bx-link-external'></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Milestones</span>
+                    <h2 class="section-title">Achievements</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="achievements-grid">
+                    
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon-box">
+                            <i class='bx bx-trophy'></i>
+                        </div>
+                        <h3 class="achievement-title">Smart India Hackathon (SIH) 2025</h3>
+                        <p class="achievement-text">
+                            Successfully qualified for the **Second Round** of the prestigious Smart India Hackathon (SIH) 2025.
+                        </p>
+                    </div>
+
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <h3 class="achievement-title">5-Star HackerRank Badge</h3>
+                        <p class="achievement-text">
+                            Secured the **5-Star Gold Badge** in Python problem-solving on HackerRank.
+                        </p>
+                    </div>
+
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon-box">
+                            <i class='bx bx-network-chart'></i>
+                        </div>
+                        <h3 class="achievement-title">Top 1% in IoT</h3>
+                        <p class="achievement-text">
+                            Ranked among the **Top 1%** performers nationwide in the Internet of Things (IoT) evaluations.
+                        </p>
+                    </div>
+
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon-box">
+                            <i class='bx bx-certification'></i>
+                        </div>
+                        <h3 class="achievement-title">NPTEL Certified (91%)</h3>
+                        <p class="achievement-text">
+                            Secured a top score of **91% (Elite + Gold)** in NPTEL: *Understanding Incubation and Entrepreneurship*.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Credentials</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="certifications-grid">
+                    
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon-wrapper">
+                            <i class='bx bxl-aws'></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">AWS Cloud Foundations</h3>
+                            <p class="cert-issuer">Amazon Web Services</p>
+                            <span class="cert-badge">AWS Academy</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon-wrapper">
+                            <i class='bx bx-line-chart'></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Data Science for Beginners</h3>
+                            <p class="cert-issuer">Board Infinity</p>
+                            <span class="cert-badge">Verified Credential</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon-wrapper">
+                            <i class='bx bx-code-curly'></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">C Language Foundation</h3>
+                            <p class="cert-issuer">Matrix Software Training Institute</p>
+                            <span class="cert-badge">Foundational</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Let's Connect</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    
+                    <div class="contact-info-block">
+                        <div class="info-intro">
+                            <h3>Have a project in mind or looking for an intern?</h3>
+                            <p>Feel free to reach out via phone, email, or connect with me on LinkedIn. I'm always open to discussing new opportunities or collaborating on tech initiatives.</p>
+                        </div>
+                        
+                        <div class="contact-cards">
+                            <a href="tel:+919652032665" class="contact-info-card glass-card">
+                                <div class="info-icon">
+                                    <i class='bx bx-phone'></i>
+                                </div>
+                                <div class="info-details">
+                                    <span class="info-label">Call Me</span>
+                                    <span class="info-val">+91-9652032665</span>
+                                </div>
+                            </a>
+
+                            <a href="mailto:chandrasekhar2782@gmail.com" class="contact-info-card glass-card">
+                                <div class="info-icon">
+                                    <i class='bx bx-envelope'></i>
+                                </div>
+                                <div class="info-details">
+                                    <span class="info-label">Email Me</span>
+                                    <span class="info-val">chandrasekhar2782@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="https://linkedin.com/in/chandrasekharreddyvuturu" target="_blank" class="contact-info-card glass-card">
+                                <div class="info-icon">
+                                    <i class='bx bxl-linkedin'></i>
+                                </div>
+                                <div class="info-details">
+                                    <span class="info-label">LinkedIn</span>
+                                    <span class="info-val">linkedin.com/in/chandrasekharreddyvuturu</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form (Recruiter friendly interface) -->
+                    <div class="contact-form-block glass-card">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" action="#" onsubmit="event.preventDefault(); alert('Thank you! This is a demo form placeholder. Reach me via direct Email or LinkedIn.');">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" required placeholder="Your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <i class='bx bx-send'></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-block">
+        <div class="container footer-container">
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/chandrasekharreddyvuturu" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="mailto:chandrasekhar2782@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+            </div>
+            <p class="footer-copy">
+                Designed &amp; Developed with <span class="heart-pulse">&#10084;</span> by <span class="gradient-text footer-name">Vuturu Chandra Sekhar Reddy</span>
+            </p>
+            <p class="footer-rights">&copy; 2026. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top" class="scroll-to-top">
+        <i class='bx bx-chevron-up'></i>
+    </button>
+
+    <!-- Core Javascript file -->
+    <script src="index.js"></script>
+</body>
+</html>
