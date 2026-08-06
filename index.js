@@ -200,9 +200,10 @@ function initTypewriter() {
     if (!textElement) return;
 
     const words = [
-        "AI & Machine Learning Engineer",
-        "Python Developer",
-        "Problem Solver"
+        "Full Stack & Java Developer",
+        "Spring Boot & Backend Engineer",
+        "AI & Machine Learning Developer",
+        "Software Problem Solver"
     ];
     
     let wordIndex = 0;

@@ -726,6 +726,8 @@ body {
 .category-icon.c2 { color: var(--color-purple); border: 1px solid rgba(157, 78, 221, 0.15); }
 .category-icon.c3 { color: var(--color-cyan); border: 1px solid rgba(9, 241, 255, 0.15); }
 .category-icon.c4 { color: var(--color-indigo); border: 1px solid rgba(67, 97, 238, 0.15); }
+.category-icon.c5 { color: var(--color-blue); border: 1px solid rgba(0, 242, 254, 0.15); }
+.category-icon.c6 { color: var(--color-purple); border: 1px solid rgba(157, 78, 221, 0.15); }
 
 .category-header h3 {
     font-family: var(--font-accent);
@@ -779,6 +781,14 @@ body {
 .fill-html { background: linear-gradient(90deg, var(--color-blue), var(--color-purple)); }
 .fill-css { background: linear-gradient(90deg, var(--color-cyan), var(--color-purple)); }
 .fill-mysql { background: linear-gradient(90deg, var(--color-indigo), var(--color-cyan)); }
+.fill-springboot { background: linear-gradient(90deg, var(--color-purple), var(--color-blue)); }
+.fill-springsec { background: linear-gradient(90deg, var(--color-indigo), var(--color-purple)); }
+.fill-jpa { background: linear-gradient(90deg, var(--color-blue), var(--color-cyan)); }
+.fill-hibernate { background: linear-gradient(90deg, var(--color-cyan), var(--color-purple)); }
+.fill-thymeleaf { background: linear-gradient(90deg, var(--color-purple), var(--color-indigo)); }
+.fill-mongodb { background: linear-gradient(90deg, var(--color-blue), var(--color-indigo)); }
+.fill-tools { background: linear-gradient(90deg, var(--color-cyan), var(--color-blue)); }
+.fill-concepts { background: linear-gradient(90deg, var(--color-indigo), var(--color-purple)); }
 
 /* ==========================================================================
    Internship Section
