@@ -1147,10 +1147,14 @@ body {
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.info-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 2rem;
 }
 
 .info-intro h3 {
@@ -1163,12 +1167,11 @@ body {
 .info-intro p {
     color: var(--text-secondary);
     font-size: 1rem;
-    margin-bottom: 2rem;
 }
 
 .contact-cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.2rem;
 }
 
