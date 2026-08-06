@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTypewriter();
     initMobileNavigation();
     initScrollInteractions();
+    initContactForm();
 });
 
 /* ==========================================================================
@@ -384,4 +385,81 @@ function initScrollInteractions() {
             });
         });
     }
+}
+
+/* ==========================================================================
+   6. Contact Form Email Handling (FormSubmit AJAX Integration)
+   ========================================================================== */
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    const statusMsg = document.getElementById('form-status-msg');
+    const submitBtn = document.getElementById('contact-submit-btn');
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        const name = nameInput ? nameInput.value.trim() : '';
+        const email = emailInput ? emailInput.value.trim() : '';
+        const message = messageInput ? messageInput.value.trim() : '';
+
+        if (!name || !email || !message) return;
+
+        // UI Feedback: Sending state
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            const btnSpan = submitBtn.querySelector('span');
+            if (btnSpan) btnSpan.textContent = 'Sending...';
+        }
+
+        if (statusMsg) {
+            statusMsg.className = 'form-status-msg';
+            statusMsg.style.display = 'none';
+        }
+
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/chandrasekhar2782@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message,
+                    _subject: `New Portfolio Message from ${name}`
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success !== "false") {
+                if (statusMsg) {
+                    statusMsg.textContent = '✓ Message sent successfully! I will get back to you soon.';
+                    statusMsg.className = 'form-status-msg success';
+                }
+                form.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (err) {
+            console.error('Submission error:', err);
+            if (statusMsg) {
+                statusMsg.textContent = '✕ Could not send message automatically. Please reach out directly to chandrasekhar2782@gmail.com';
+                statusMsg.className = 'form-status-msg error';
+            }
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                const btnSpan = submitBtn.querySelector('span');
+                if (btnSpan) btnSpan.textContent = 'Send Message';
+            }
+        }
+    });
 }
