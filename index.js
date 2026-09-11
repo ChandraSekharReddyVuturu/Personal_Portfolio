@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileNavigation();
     initScrollInteractions();
     initContactForm();
+    initCardInteractions();
+    initClickRipples();
 });
 
 /* ==========================================================================
@@ -176,6 +178,13 @@ function initCursorGlow() {
     window.addEventListener('mousemove', (e) => {
         targetX = e.clientX;
         targetY = e.clientY;
+    });
+
+    // Expand cursor glow when hovering interactive cards/buttons
+    const hoverTargets = document.querySelectorAll('a, button, .glass-card, .btn, .tag, .skill-item, .contact-info-card');
+    hoverTargets.forEach(el => {
+        el.addEventListener('mouseenter', () => glow.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => glow.classList.remove('cursor-hover'));
     });
 
     function updateGlowPosition() {
@@ -461,5 +470,57 @@ function initContactForm() {
                 if (btnSpan) btnSpan.textContent = 'Send Message';
             }
         }
+    });
+}
+
+/* ==========================================================================
+   7. 3D Card Physics & Dynamic Spotlight Tracker
+   ========================================================================== */
+function initCardInteractions() {
+    const cards = document.querySelectorAll('.glass-card, .skill-category, .project-card, .timeline-item, .achievement-card, .cert-card, .contact-info-card, .internship-card, .bio-card');
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Set spotlight beam coordinates relative to card
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+
+            // Calculate subtle 3D tilt angles (-7 to +7 deg max)
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -6;
+            const rotateY = ((x - centerX) / centerX) * 6;
+
+            card.style.setProperty('--rotate-x', `${rotateX.toFixed(2)}deg`);
+            card.style.setProperty('--rotate-y', `${rotateY.toFixed(2)}deg`);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            // Smoothly reset 3D tilt back to flat state
+            card.style.setProperty('--rotate-x', '0deg');
+            card.style.setProperty('--rotate-y', '0deg');
+        });
+    });
+}
+
+/* ==========================================================================
+   8. Click Ripple Visual Feedback
+   ========================================================================== */
+function initClickRipples() {
+    window.addEventListener('click', (e) => {
+        // Prevent ripple on non-interactive backdrop clicks if desired, or enable globally
+        const ripple = document.createElement('div');
+        ripple.className = 'click-ripple';
+        ripple.style.left = `${e.clientX}px`;
+        ripple.style.top = `${e.clientY}px`;
+        document.body.appendChild(ripple);
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
     });
 }
