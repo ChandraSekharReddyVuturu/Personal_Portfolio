@@ -23,7 +23,8 @@ const mimeTypes = {
 };
 
 const server = http.createServer((req, res) => {
-  let safePath = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
+  const urlPath = req.url.split('?')[0];
+  let safePath = path.normalize(urlPath).replace(/^(\.\.[\/\\])+/, '');
   if (safePath === '\\' || safePath === '/') {
     safePath = 'index.html';
   }
